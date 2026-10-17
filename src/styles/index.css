@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+
+@theme {
+  --font-sans: 'Inter Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --color-navy-950: #0b2638;
+  --color-navy-900: #102b3f;
+  --color-navy-800: #204a53;
+
+  --color-brand-50: #e8f3f1;
+  --color-brand-100: #cfe7e2;
+  --color-brand-600: #157260;
+  --color-brand-700: #0f594f;
+
+  --color-ink: #102235;
+  --color-ink-muted: #556579;
+  --color-ink-subtle: #7d8ca0;
+
+  --color-canvas: #f5f6f4;
+  --color-surface: #ffffff;
+  --color-line: #e2e8e6;
+  --color-line-strong: #c9d3d0;
+
+  --color-danger-50: #fff0ee;
+  --color-danger-600: #bf4a45;
+  --color-danger-700: #9e3a36;
+  --color-warning-50: #fff2da;
+  --color-warning-600: #bd791f;
+  --color-warning-700: #8f5a14;
+  --color-success-50: #e8f3f1;
+  --color-success-700: #0f594f;
+  --color-info-50: #eaf1f8;
+  --color-info-700: #1f4f7a;
+
+  --shadow-card: 0 6px 25px rgb(17 43 57 / 0.045);
+  --shadow-overlay: 0 18px 50px rgb(11 38 56 / 0.18);
+
+  --radius-control: 0.625rem;
+  --radius-card: 0.875rem;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+    font-feature-settings:
+      'cv11',
+      'tnum' 0;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+
+  ::selection {
+    @apply bg-brand-100;
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
